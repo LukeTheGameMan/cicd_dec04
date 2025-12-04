@@ -28,44 +28,9 @@ jobs:
       - name: Run basic tests
         run: pytest -q
 
-      - name: Run tests with coverage and HTML report
+      - name: Run tests with coverage
         run: |
           pytest -q \
             --cov=. \
             --cov-report=term \
-            --cov-report=xml \
-            --html=report.html \
-            --self-contained-html
-
-      - name: Generate HTML coverage report
-        run: coverage html
-
-      - name: Prepare site folder
-        run: |
-          mkdir site
-          mv report.html site/
-          mv htmlcov site/coverage
-
-      - name: Print report URLs
-        run: |
-          echo "Test Report:"
-          echo "https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/report.html"
-          echo "Coverage Report:"
-          echo "https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/coverage/index.html"
-
-      - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: ./site
-
-
-  deploy:
-    needs: run-tests
-    runs-on: ubuntu-latest
-    permissions:
-      pages: write
-      id-token: write
-
-    steps:
-      - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v4
+            --cov-report=xml
