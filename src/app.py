@@ -26,3 +26,17 @@ def log (a, b):
 def square (a):
     return a*a
 
+def sin (a, degrees=False):
+    if degrees:
+        return math.sin(math.radians(a))
+    return math.sin(a)
+
+def cos (a, degrees=False):
+    if degrees:
+        return math.cos(math.radians(a))
+    return math.cos(a)
+
+def sqrt (a):
+    if a < 0:
+        raise Exception(f"ERROR: Expected non-negative argument, got {a}")
+    return math.sqrt(a)
