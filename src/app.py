@@ -15,4 +15,14 @@ def div (a, b):
     return a/b
 
 def log (a, b):
-    if
+    if a <= 0 and b < 1:
+        raise Exception(f"ERROR: Expected positive, non-zero argument and greater-than-1 base, got {a} and {b}")
+    elif a <= 0:
+        raise Exception(f"ERROR: Expected positive, non-zero argument, got {a}")
+    elif b < 1:
+        raise Exception(f"ERROR: Expected greater-than-1 base, got {b}")
+    return math.log(a, b)
+
+def square (a):
+    return a*a
+
