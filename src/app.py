@@ -1,3 +1,5 @@
+import math
+
 def add (a, b):
     return a+b
 
@@ -8,4 +10,9 @@ def mult (a, b):
     return a*b
 
 def div (a, b):
+    if b == 0:
+        raise Exception("ERROR: Divided by zero")
     return a/b
+
+def log (a, b):
+    if
