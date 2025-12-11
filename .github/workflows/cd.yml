@@ -20,7 +20,6 @@ jobs:
       - name: download artifacts
         uses: actions/download-artifact@v4
         with:
-          name: artifact-upload
           path: ./sites
 
       - name: upload pages artifact
