@@ -7,7 +7,7 @@ on:
     branches: [ master ]
 
 jobs:
-  run-tests:
+  deploy:
     if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
     permissions:
