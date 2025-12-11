@@ -15,12 +15,8 @@ def div (a, b):
     return a/b
 
 def log (a, b):
-    if a <= 0 and b < 1:
-        raise Exception(f"ERROR: Expected positive, non-zero argument and greater-than-1 base, got {a} and {b}")
-    elif a <= 0:
-        raise Exception(f"ERROR: Expected positive, non-zero argument, got {a}")
-    elif b < 1:
-        raise Exception(f"ERROR: Expected greater-than-1 base, got {b}")
+    if a <= 0 or b < 1:
+        raise Exception("ERROR: Expected positive, non-zero argument and greater-than-1 base")
     return math.log(a, b)
 
 def square (a):
@@ -38,7 +34,7 @@ def cos (a, degrees=False):
 
 def sqrt (a):
     if a < 0:
-        raise Exception(f"ERROR: Expected non-negative argument, got {a}")
+        raise Exception("ERROR: Expected non-negative argument")
     return math.sqrt(a)
 
 def perc (a, b):
