@@ -62,3 +62,15 @@ def test_sin3():
 
 def test_sin4():
     assert sin(90, True) != 0
+
+def test_cos1():
+    assert cos(2(math.pi)) == 1
+
+def test_cos2():
+    assert cos(360, True) == 1
+
+def test_cos3():
+    assert cos(2(math.pi)) != 0
+
+def test_cos4():
+    assert cos(360, True) != 0
