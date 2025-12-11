@@ -20,7 +20,7 @@ jobs:
       - name: download artifacts
         uses: actions/download-artifact@v4
         with:
-          name: test-coverage
+          name: artifact-upload
           path: ./sites
 
       - name: upload pages artifact
