@@ -19,6 +19,12 @@ def test_sub1():
 def test_sub2():
     assert sub(4, 3) != 2
 
+def test_mult1():
+    assert mult(5, 4) == 20
+
+def test_mult2():
+    assert mult(5, 4) != 21
+
 def test_div1():
     assert div(10, 2) == 5
 
@@ -29,3 +35,12 @@ def test_div3():
     with pytest.raises(ZeroDivisionError):
         div(10, 0)
 
+def test_log1():
+    assert log(10, 10) == 1
+
+def test_log2():
+    assert log(10, 10) != 0
+
+def test_log3():
+    with pytest.raises(Exception):
+        log(-2, 0)
