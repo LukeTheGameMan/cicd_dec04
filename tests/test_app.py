@@ -22,5 +22,5 @@ def test_sub2():
 def test_div1():
     assert div(10, 2) == 5
 
-#def test_div2():
- #   assert div(10, 0) != 5
+def test_div2():
+    assert div(10, 0) != 5
