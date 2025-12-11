@@ -11,7 +11,7 @@ def mult (a, b):
 
 def div (a, b):
     if b == 0:
-        raise Exception("ERROR: Divided by zero")
+        raise ZeroDivisionError("ERROR: Divided by zero")
     return a/b
 
 def log (a, b):
