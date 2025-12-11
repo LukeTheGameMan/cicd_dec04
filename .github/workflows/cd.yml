@@ -1,0 +1,32 @@
+
+name: CD
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+
+jobs:
+  run-tests:
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{steps.deployment.outputs.page_url}}
+
+    steps:
+      - name: download artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: test-coverage
+          path: ./sites
+
+      - name: upload pages artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: ./sites
+
+      - name: deploy the artifacts
+        uses: actions/deploy-pages@v4
