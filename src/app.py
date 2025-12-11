@@ -40,3 +40,8 @@ def sqrt (a):
     if a < 0:
         raise Exception(f"ERROR: Expected non-negative argument, got {a}")
     return math.sqrt(a)
+
+def perc (a, b):
+    if b == 0:
+        raise Exception("ERROR: Divided by zero")
+    return (a/b) * 100
