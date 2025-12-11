@@ -9,7 +9,6 @@ on:
 
 jobs:
   run-tests:
-    #if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
     permissions:
       pages: write
@@ -47,7 +46,6 @@ jobs:
           mkdir sites
           mv htmlcov sites/
           mv coverage.xml sites/
-          #echo '<!DOCTYPE html><html><head><meta charset="UTF-8"><title>Coverage Reports</title></head><body><h1>Coverage Reports</h1><ul><li><a href="htmlcov/index.html">HTML Coverage Report</a></li><li><a href="coverage.xml">XML Coverage Report</a></li></ul></body></html>' > sites/index.html
 
       - name: upload pages artifact
         uses: actions/upload-pages-artifact@v4
