@@ -23,4 +23,10 @@ def test_div1():
     assert div(10, 2) == 5
 
 def test_div2():
-    assert div(10, 0) != 5
+    assert div(10, 2) != 4
+
+def test_div3():
+    with pytest.raises(ZeroDivisionError):
+        div(10, 0)
+
+
