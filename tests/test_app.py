@@ -29,4 +29,3 @@ def test_div3():
     with pytest.raises(ZeroDivisionError):
         div(10, 0)
 
-
