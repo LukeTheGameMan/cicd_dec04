@@ -12,3 +12,9 @@ def test_add():
 
 def test_add2():
     assert add(5, 6) != 10
+
+def test_div1():
+    assert div(10, 2) == 5
+
+def test_div2():
+    assert div(10, 0) != 5
