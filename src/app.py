@@ -1,4 +1,4 @@
-import math
+oimport math
 
 def add (a, b):
     return a+b
@@ -39,5 +39,5 @@ def sqrt (a):
 
 def perc (a, b):
     if b == 0:
-        raise Exception("ERROR: Divided by zero")
+        raise ZeroDivisionError("ERROR: Divided by zero")
     return (a/b) * 100
