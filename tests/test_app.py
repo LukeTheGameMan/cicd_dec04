@@ -1,4 +1,4 @@
-import sys, pytest
+import sys, pytest, math
 from pathlib import Path
 
 root = Path(__file__).resolve().parents[1]
