@@ -47,5 +47,4 @@ jobs:
       - name: upload the artifacts
         uses: actions/upload-pages-artifact@v4
         with:
-          name: artifact-upload
           path: ./sites
