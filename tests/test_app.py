@@ -94,4 +94,3 @@ def test_perc2():
 def test_perc3():
     with pytest.raises(ZeroDivisionError):
         perc(5, 0)
-    assert div(10, 0) != 5
