@@ -85,3 +85,12 @@ def test_sqrt3():
     with pytest.raises(Exception):
         sqrt(-1)
 
+def test_perc1():
+    assert perc(5, 10) == 50.0
+
+def test_perc2():
+    assert perc(5, 10) != 49.9
+
+def test_perc3():
+    with pytest.raises(ZeroDivisionError):
+        perc(5, 0)
