@@ -74,3 +74,14 @@ def test_cos3():
 
 def test_cos4():
     assert cos(360, True) != 0
+
+def test_sqrt1():
+    assert sqrt(4) == 2
+
+def test_sqrt2():
+    assert sqrt(4) != 3
+
+def test_sqrt3():
+    with pytest.raises(Exception):
+        sqrt(-1)
+
